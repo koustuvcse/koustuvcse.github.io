@@ -1,12 +1,150 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Koustuv Dutta - Profile </title>
-    </head>
-    <body>
-        <h1>Hi User</h1>
-        <h2> Projects </h2>
-        <a href="https://github.com/koustuvcse/spyDer">Python JSON parse and Postgres CRUD</a>
-        
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koustuv D</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #24292e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        nav {
+            background-color: #343a40;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #24292e;
+            font-size: 28px;
+            margin-top: 0;
+        }
+        .section p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-info p {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Koustuv D</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about-me" class="tab-link">About Me</a></li>
+            <li><a href="#projects" class="tab-link">Projects</a></li>
+            <li><a href="#contact" class="tab-link">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="about-me" class="tab-content active section">
+            <h2>About Me</h2>
+            <p>Data Consultant with 5+ years of experience in the design and development of "BigData" data pipelines to analyze and process data, subsequently generating insights and optimized datasets to drive the business.</p>
+            <!-- Add more information about yourself -->
+        </div>
+        <div id="projects" class="tab-content section">
+            <h2>Projects</h2>
+            <p>Here are some of my personal projects:</p>
+            <!-- Add your projects here -->
+            <a href="https://github.com/koustuvcse/spyDer">Python JSON parse and Postgres CRUD</a>
+        </div>
+        <div id="contact" class="tab-content section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i>koustuvdutta@gmail.com</p>
+            </div>
+            <!-- Add your contact information here -->
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    tabContents.forEach(function(content) {
+                        content.classList.remove('active');
+                        if (content.id === targetId) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
 </html>
+
